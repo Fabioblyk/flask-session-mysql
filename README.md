@@ -60,6 +60,6 @@ def example():
 
 app.run(port=5555)
 ```
-**NOTE**: Make sure you config the mysql data before bind it with MysqlSession(app) is it won't work
+**NOTE**: Make sure you config the mysql data before binding it or it won't work
 First configuration then binding!
 
