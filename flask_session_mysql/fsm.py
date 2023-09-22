@@ -99,7 +99,7 @@ class MysqlSessionInterface(SessionInterface):
         if cursor.fetchone() is None:
             cursor.execute("INSERT INTO `sessions` (`session_id`, `ip_address`, `data`, `user_agent`, `last_activity`)"
                            " VALUES (%s, %s, %s, %s, %s);",
-                           (session.sid, request.remote_addr, json.dumps({}), request.user_agent.string, time.time()))
+                           (session.sid, request.remote_addr, json.dumps(data), request.user_agent.string, time.time()))
 
         else:
             cursor.execute(
